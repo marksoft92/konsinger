@@ -1,16 +1,14 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './index.scss';
-import { BrowserRouter as Router} from 'react-router-dom';
+const rootElement = document.getElementById('root');
 
-const container = document.getElementById('root')!;
-const root = createRoot(container);
-
-root.render(
+render(
   <React.StrictMode>
     <Router>
       <Provider store={store}>
@@ -18,6 +16,7 @@ root.render(
       </Provider>
     </Router>
   </React.StrictMode>,
+  rootElement
 );
 
 reportWebVitals();
