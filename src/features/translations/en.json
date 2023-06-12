@@ -1,0 +1,16 @@
+{
+    "title": "News Finder",
+    "app.languagePl": "Polish",
+    "app.languageEn": "English",
+    "header.list": "List",
+    "header.tiles": "Tiles",
+    "header.info": "Info",
+    "header.infoTooltip": "The hardest thing about this task was the struggle with time, as I work as a React developer in Szczecin and have to commute 100 km to work every day. After work, I also work for another company, so finding time for this task was very difficult. Moreover, hitting your coding preferences was a lottery, as everyone has a slightly different idea of architecture. For example, I don't keep slices in the Redux folder, but in the features folder, where the main component index is located for a given part of the application.I wrote modest tests, it was also related to time, you wrote that the time was until the end of March, but there was a maximum of 12 hours on git, so I decided that I would spend a maximum of 8 hours on this. Regarding the challenge, it was somewhat similar to the biggest difficulties.",
+    "header.infoTitle":"Difficulties and pleasures",
+    "footer.count": "Count articles: ",
+    "footer.currentTime": "Current time: ",
+    "popup.author": "Author:",
+    "popup.source": "Source:",
+
+    "spiner.loading": "Loading..."
+}    

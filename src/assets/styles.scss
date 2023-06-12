@@ -1,0 +1,14 @@
+.content {
+    display: flex;
+   ul {
+    width: 10rem;
+    background: #f1efef;
+    color: #000;
+
+    .ant-menu-item {
+        img {
+            width: 30px;
+        }
+    }
+   }
+}
