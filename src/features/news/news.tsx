@@ -1,22 +1,17 @@
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import Popup from '../../components/popup';
-import { getSelectView } from '../globalSlice/headerSlice';
-import { Article, clearSelectedArticle, fetchNews, selectArticle, selectArticles, selectLoading, selectSelectedArticle } from './newsSlice';
+import {  fetchNews, selectArticles, selectLoading } from './newsSlice';
 import { useParams } from 'react-router-dom';
-import { Empty } from 'antd';
+import { Table } from 'antd';
 import Spiner from '../../components/spiner';
+import columns from './columns';
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 const NewsList: React.FC = () => {
-    const { id } = useParams()
-    const countryCode = id
+    const { countryCode } = useParams()
     const dispatch = useAppDispatch();
     const articles = useAppSelector(selectArticles);
     const loading = useAppSelector(selectLoading);
-    const viewClass = useAppSelector(getSelectView);
-    const selectedArticle = useAppSelector(selectSelectedArticle);
-    const isArticles = articles.length
-
 
     useEffect(() => {
         dispatch(fetchNews(countryCode));
@@ -26,27 +21,15 @@ const NewsList: React.FC = () => {
         return <Spiner />;
     }
 
-    const handleArticleClick = (article: Article) => {
-        dispatch(selectArticle(article));
-    };
+
 
     return (
         <>
-            {isArticles && <ul className={viewClass.view}>
-                {articles.map((article) => (
-                    <li key={article.url}>
-                        <a onClick={() => handleArticleClick(article)}>
-                            <h3>{article.title}</h3>
-                            {article.urlToImage ? <img src={article.urlToImage || ''} alt={article.title} /> : <></>}
-                            <p>{article.description}</p>
-                            <div><p className="">{article.publishedAt}</p></div>
-                        </a>
-                    </li>
-                ))}
-            </ul> || <Empty />}
-            {selectedArticle && (
-                <Popup article={selectedArticle} onClose={() => dispatch(clearSelectedArticle())} />
-            )}
+            <Breadcrumbs url={countryCode ? `/country/${countryCode}` : ''} />
+            <Table
+                dataSource={articles}
+                columns={columns}
+            />
         </>
     );
 };

@@ -1,21 +1,17 @@
-import React, { ComponentType, ReactElement } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import NewsList from './features/news/news';
+import { Routes, Route } from 'react-router-dom';
 import './App.scss'
 import LanguageWrapper from './features/languages/LanguageWraper';
+import routes from './routes';
 
 
-interface RouteProps {
-  element?: ReactElement;
-}
 
 function App() {
   return (
     <LanguageWrapper>
       <Routes>
-        <Route path="/" element={<Layout><NewsList /></Layout>} />
-        <Route path="/country/:id" element={<Layout><NewsList /></Layout>} />
+        {routes.map((route, index) => (
+          <Route key={index} {...route} />
+        ))}
       </Routes>
     </LanguageWrapper>
   );
