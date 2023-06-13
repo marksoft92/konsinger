@@ -11,5 +11,17 @@
     "footer.currentTime": "Godzina: ",
     "popup.author": "Autor:",
     "popup.source": "Zródło:",
-    "spiner.loading": "Wczytywanie..."
-}    
+    "spiner.loading": "Wczytywanie...",
+    "title.homePage": "Strona główna",
+    "home.howToUse.title": "Jak korzystać:",
+    "home.howToUse.step1": "Po lewej stronie znajduje się lista krajów. Kliknij na kraj, aby zobaczyć powiązane z nim artykuły newsowe.",
+    "home.howToUse.step2": "Po kliknięciu na kraj pojawi się reaktywna tabela z artykułami newsowymi związanych z wybranym krajem.",
+    "home.howToUse.step3": "Kliknij na artykuł newsowy, aby przejść do jego szczegółów w aplikacji.",
+    "home.howToUse.step4": "W aplikacji możesz również przełączać się między różnymi językami, aby wyświetlać treści w preferowanym języku.",
+    "home.technologiesUsed.title": "Wykorzystane technologie:",
+    "home.technologiesUsed.react": "React: Biblioteka JavaScript do budowy interfejsów użytkownika.",
+    "home.technologiesUsed.typescript": "TypeScript: Typowany nadzbiór języka JavaScript, który pomaga poprawić jakość kodu i produktywność programisty.",
+    "home.technologiesUsed.reactRouter": "React Router: Biblioteka routowania do deklaratywnej nawigacji w aplikacji React.",
+    "home.technologiesUsed.otherLibraries": "Inne biblioteki i narzędzia specyficzne dla projektu mogą być tutaj wymienione.",
+    "home.apiInfo": "Wykorzystałem te API, ponieważ chciałem dodać możliwość wyboru języka w mojej aplikacji. Niestety, to API nie zawierało właściwego identyfikatora dla artykułu, dlatego postanowiłem użyć tytułu artykułu jako identyfikatora. Z tego powodu nie mogłem bezpośrednio pobrać pojedynczego artykułu za pomocą REST API. Musiałem więc znaleźć obejście i pobierać artykuły na podstawie tytułu z mojego reduktora. Wiem, że API dla książek mogłoby być lepsze, a może nawet wygodniejsze, do wykonania tego zadania, ale nie było to dla mnie problemem."
+  }

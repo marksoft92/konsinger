@@ -1,6 +1,6 @@
 import { connect, useDispatch } from 'react-redux';
 import { fetchNews, selectArticles, selectLoading } from './newsSlice';
-import useCustomNavigate from '../../utils/helpers';
+import { useCustomNavigate } from '../../utils/helpers';
 import NewsList from './news';
 import { useEffect } from 'react';
 import { useParams } from 'react-router';

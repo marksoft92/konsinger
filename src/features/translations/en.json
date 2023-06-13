@@ -11,6 +11,17 @@
     "footer.currentTime": "Current time: ",
     "popup.author": "Author:",
     "popup.source": "Source:",
-
-    "spiner.loading": "Loading..."
-}    
+    "spiner.loading": "Loading...",
+    "title.homePage": "Home Page",
+    "home.howToUse.title": "How to Use:",
+    "home.howToUse.step1": "On the left side, you will find a list of countries. Click on a country to view the corresponding news articles.",
+    "home.howToUse.step2": "A reactive table will appear with news articles related to the selected country.",
+    "home.howToUse.step3": "Click on a news article to navigate to its details within the application.",
+    "home.howToUse.step4": "Within the application, you can also switch between different languages to view the content in your preferred language.",
+    "home.technologiesUsed.title": "Technologies Used:",
+    "home.technologiesUsed.react": "React: A JavaScript library for building user interfaces.",
+    "home.technologiesUsed.typescript": "TypeScript: A typed superset of JavaScript that helps improve code quality and developer productivity.",
+    "home.technologiesUsed.reactRouter": "React Router: A routing library for declarative navigation within a React application.",
+    "home.technologiesUsed.otherLibraries": "Other libraries and tools specific to your project may be listed here.",
+    "home.apiInfo": "I utilized this API because I wanted to add language selection functionality to my application. However, the API didn't have a proper article ID, so I decided to use the article title as the identifier. As a result, I couldn't fetch a single article directly through the REST API. I had to find a workaround and retrieve articles based on their title from my reducer. I'm aware that using a books API could have been better, or perhaps more convenient, for accomplishing this task, but it wasn't a problem for me."
+  }

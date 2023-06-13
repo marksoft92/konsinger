@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-const useCustomNavigate = () => {
+export const useCustomNavigate = () => {
     const navigate = useNavigate();
 
     const onPush = (path: string) => {
@@ -10,4 +10,10 @@ const useCustomNavigate = () => {
     return onPush;
 };
 
-export default useCustomNavigate;
+
+
+export const convertToHyphenCase = (str: string) => {
+
+    return str.replace(/\s+/g, '-').toLowerCase()
+ }
+

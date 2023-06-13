@@ -1,28 +1,28 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-interface BreadcrumbsProps {
-    url: string;
-}
+interface BreadcrumbsProps { }
 
-const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ url }) => {
+const Breadcrumbs: React.FC<BreadcrumbsProps> = () => {
     const location = useLocation();
-    const parts = url.split('/').filter(part => part !== '');
+    const parts = location.pathname.split('/').filter(part => part !== '');
 
     return (
-        <div>
+        <div className="breadcrumbs">
             {parts.map((part, index) => {
                 const path = `/${parts.slice(0, index + 1).join('/')}`;
                 const isActive = location.pathname === path;
 
                 return (
                     <React.Fragment key={index}>
-                        {index > 0 && <span> / </span>}
-                        {isActive ? (
-                            <span>{part}</span>
-                        ) : (
-                            <Link to={path}>{part}</Link>
-                        )}
+                        {index > 0 && <span className="breadcrumb-separator"></span>}
+                        <span className={`breadcrumb-item${isActive ? ' active' : ''}`}>
+                            {isActive ? (
+                                <span>{part}</span>
+                            ) : (
+                                <Link to={path}>{part}</Link>
+                            )}
+                        </span>
                     </React.Fragment>
                 );
             })}
