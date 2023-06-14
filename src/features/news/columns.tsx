@@ -1,29 +1,31 @@
+import { FormattedMessage } from "react-intl";
+
 const columns = [
     {
-        title: 'author',
+        title: <FormattedMessage id="popup.author" />,
         dataIndex: 'author',
         key: 'name',
     },
     {
-        title: 'title',
+        title:<FormattedMessage id="titleColumn" />,
         dataIndex: 'title',
         key: 'age',
     },
     {
-        title: 'publishedAt',
+        title: <FormattedMessage id="publishedAtColumn" />,
         dataIndex: 'publishedAt',
-        key: 'address',
+        key: 'publishedAt',
     },
     {
-        title: 'description',
+        title: <FormattedMessage id="descriptionColumn" />,
         dataIndex: 'description',
         key: 'description',
     },
     {
-        title: 'url',
+        
         dataIndex: 'url',
-        key: 'content',
-        render: (v: string) => { return <a target="_blank" rel="noopener noreferrer" href={v}>Sprawdz</a> }
+        key: 'url',
+        render: (v: string) => { return <a target="_blank" rel="noopener noreferrer" href={v}><FormattedMessage id="checkButton"/></a> }
     },
 ];
 

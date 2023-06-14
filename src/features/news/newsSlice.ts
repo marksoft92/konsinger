@@ -14,6 +14,7 @@ export interface Article {
         id: string | null;
         name: string;
     };
+    content: string
 }
 
 interface NewsState {

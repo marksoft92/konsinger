@@ -27,7 +27,7 @@ const InfoPage: React.FC = () => {
             <h2>
                 <FormattedMessage id="home.technologiesUsed.title" />
             </h2>
-            <ul>
+            <ol>
                 <li>
                     <FormattedMessage id="home.technologiesUsed.react" />
                 </li>
@@ -40,12 +40,12 @@ const InfoPage: React.FC = () => {
                 <li>
                     <FormattedMessage id="home.technologiesUsed.otherLibraries" />
                 </li>
-            </ul>
-            <ul>
+            </ol>
+            <ol>
                 <li>
                     <FormattedMessage id="home.apiInfo" />
                 </li>
-            </ul>
+            </ol>
         </div>
     );
 };

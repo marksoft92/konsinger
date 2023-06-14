@@ -18,7 +18,7 @@ const routes: RouteProps[] = [
     },
     {
         path: '/country/:countryCode/:title',
-        element: <Layout><Article /></Layout>,
+        element: <Layout><Article  /></Layout>,
     },
 ];
 

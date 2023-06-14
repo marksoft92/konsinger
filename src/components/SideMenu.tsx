@@ -2,17 +2,20 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
+import { FormattedMessage } from 'react-intl';
+
 import { useAppDispatch, useAppSelector } from '../app/hooks';
 import { fetchCountries, selectCountries, selectLoading } from '../features/countries/countriesSLice';
-import { FormattedMessage } from 'react-intl';
 import { selectLanguage } from '../features/languages/languagesSlice';
 
 const SideMenu: React.FC = () => {
-    const countries = useAppSelector(selectCountries);
-    const loading = useAppSelector(selectLoading);
+    const { countries, loading } = useAppSelector((state) => ({
+        countries: selectCountries(state),
+        loading: selectLoading(state)
+      }));
     const dispatch = useAppDispatch();
     const locale: string = useAppSelector(selectLanguage);
-    const localeShort = locale === 'en' ? 'bre' : 'pol'
+    const localeShort = locale === 'en' ? 'bre' : locale === "pl" ? 'pol' : "bre"
 
 
     useEffect(() => {
